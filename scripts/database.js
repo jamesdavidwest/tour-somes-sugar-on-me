@@ -38,14 +38,14 @@
         { id: 10, bandId: 10, venueId: 5, date: '2023-12-18' }
     ]
 }
-export const getVenue = () => {
+export const getVenues = () => {
     return database.venues.map(venue => ({...venue}))
 }
 
-export const getBand = () => {
+export const getBands = () => {
     return database.bands.map(band => ({...band}))
 }
 
-export const getBooking = () => {
+export const getBookings = () => {
     return database.bookings.map(booking => ({...booking}))
 }
