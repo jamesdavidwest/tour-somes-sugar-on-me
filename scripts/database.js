@@ -1,4 +1,5 @@
-// Venues Data
+//Venue, Band, and Booking Data with functions that return copies of each array.
+
  const database = {
     venues: [
         { name: 'The Cellar Moss', address: '123 Elm St', squareFootage: 2000, maxOccupancy: 150 },
