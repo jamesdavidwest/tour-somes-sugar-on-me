@@ -18,7 +18,7 @@ const applicationHTML = `
 </article>
 
 <article class="Bookings">
-    <h2>Bookins</h2>
+    <h2>Bookings</h2>
     ${Bookings()}
 </article>
 `

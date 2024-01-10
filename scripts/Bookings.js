@@ -7,8 +7,9 @@ const bookings = getBookings()
 
 //function to find the venue of booking
 const findVenue = (booking, venues) => {
+    const venueIds = Array.isArray(booking.venueId) ? booking.venueId : [booking.venueId]
     for (const venue of venues) {
-        if (venue.id === booking.venueId) {
+        if (venueIds.some(id => id.id === venue.id)) {
             return venue;
         }
     }
@@ -32,7 +33,7 @@ export const Bookings = ()=> {
         const venue = findVenue(booking, venues);
         const band = findBand(booking, bands);
 
-        bookingsHTML += `<li>${band.name} are playing at ${venue.name} on ${booking.date}.</li>`
+        bookingsHTML += `<li>${band.name} are playing at ${venue.name} on ${booking.date} at ${booking.venueId.time}.</li>`
     }
 
     bookingsHTML += '</ul>';
