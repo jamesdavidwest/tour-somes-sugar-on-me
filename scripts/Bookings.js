@@ -26,17 +26,46 @@ const findBand = (booking, bands) => {
     throw new Error(`Band with ID ${booking.bandId} not found.`)
 };
 
+const formatDate = (dateStr) => {
+    const options = { month: 'long', day: 'numeric', year: 'numeric' }
+    const formattedDate = new Date(dateStr).toLocaleDateString('en-US', options)
+    return formattedDate
+}
+
 export const Bookings = ()=> {
     let bookingsHTML ='<ul>'
     
     for (const booking of bookings) {
         const venue = findVenue(booking, venues);
         const band = findBand(booking, bands);
+        const formattedDate = formatDate(booking.date)
 
-        bookingsHTML += `<li>${band.name} are playing at ${venue.name} on ${booking.date} at ${booking.venueId.time}.</li>`
+        bookingsHTML += `<li data-type="booking"
+        data-booking-id="${booking.id}">${band.name} are playing at ${venue.name} on ${formattedDate} at ${booking.venueId[0].time}pm.</li>`
     }
 
     bookingsHTML += '</ul>';
 
     return bookingsHTML
 }
+
+document.addEventListener(
+    "click",
+    (clickEvent) => {
+        const itemClicked = clickEvent.target;
+
+        if (itemClicked.dataset.type === "booking") {
+            const bookingId = parseInt(itemClicked.dataset.bookingId)
+            const clickedBooking = bookings.find(booking => booking.id === bookingId)
+
+            if (clickedBooking) {
+                const band = findBand(clickedBooking, bands);
+
+                const alertText = `${band.name}\n${band.genre}\nFormed in ${band.formedYear}\n${band.members} band members.`
+                alert(alertText)
+            } else {
+                console.error('Booking with ID ${bookingId} not found.')
+            }
+        }
+    }
+)

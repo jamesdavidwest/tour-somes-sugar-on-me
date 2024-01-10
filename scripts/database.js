@@ -161,13 +161,19 @@ const database = {
 		{
 			id: 3,
 			bandId: 9,
-			venueId: [{ id: 1, time: 9 }],
+			venueId: [
+				{ id: 1, time: 9 },
+				{ id: 4, time: 7 },
+			],
 			date: "2024-01-21",
 		},
 		{
 			id: 4,
 			bandId: 1,
-			venueId: [{ id: 5, time: 8 }],
+			venueId: [
+				{ id: 5, time: 8 },
+				{ id: 2, time: 9 },
+			],
 			date: "2024-01-28",
 		},
 		{
@@ -179,31 +185,34 @@ const database = {
 		{
 			id: 6,
 			bandId: 5,
-			venueId: [{ id: 9, time: 9 }],
+			venueId: [{ id: 4, time: 7 }],
 			date: "2024-02-11",
 		},
 		{
 			id: 7,
-			bandId: 4,
-			venueId: [{ id: 10, time: 8 }],
+			bandId: 2,
+			venueId: [{ id: 6, time: 9 }],
 			date: "2024-02-18",
 		},
 		{
 			id: 8,
 			bandId: 8,
-			venueId: [{ id: 4, time: 7 }],
+			venueId: [{ id: 7, time: 8 }],
 			date: "2024-02-25",
 		},
 		{
 			id: 9,
-			bandId: 2,
-			venueId: [{ id: 6, time: 9 }],
+			bandId: 4,
+			venueId: [
+				{ id: 9, time: 7 },
+				{ id: 1, time: 8 },
+			],
 			date: "2024-03-03",
 		},
 		{
 			id: 10,
 			bandId: 10,
-			venueId: [{ id: 7, time: 8 }],
+			venueId: [{ id: 10, time: 9 }],
 			date: "2024-03-10",
 		},
 		{
@@ -239,30 +248,30 @@ const database = {
 		{
 			id: 16,
 			bandId: 5,
-			venueId: [{ id: 9, time: 7 }],
+			venueId: [{ id: 4, time: 8 }],
 			date: "2024-04-21",
 		},
 		{
 			id: 17,
-			bandId: 4,
-			venueId: [{ id: 10, time: 9 }],
+			bandId: 2,
+			venueId: [{ id: 6, time: 7 }],
 			date: "2024-04-28",
 		},
 		{
 			id: 18,
 			bandId: 8,
-			venueId: [{ id: 4, time: 8 }],
+			venueId: [{ id: 7, time: 9 }],
 			date: "2024-05-05",
 		},
 		{
 			id: 19,
-			bandId: 9,
-			venueId: [{ id: 5, time: 9 }],
+			bandId: 4,
+			venueId: [{ id: 9, time: 8 }],
 			date: "2024-05-12",
 		},
 		{
 			id: 20,
-			bandId: 1,
+			bandId: 10,
 			venueId: [{ id: 10, time: 7 }],
 			date: "2024-05-19",
 		},

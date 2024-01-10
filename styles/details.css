@@ -4,16 +4,24 @@
     justify-content: space-evenly;
 }
 
-.detail--column {
-    flex-basis: 24%;
-    margin: 0 2rem;
+.details__column {
+    margin: auto;
     padding: 1rem;
-    border: 1px dotted goldenrod;
+
 }
 
-.orders {
+.details__column ul {
+    list-style-position: inside;
+}
+
+.bookings {
     font-size: 14px;
     margin: auto;
-    width: 50%;
+    width: 600px;
+    text-align: center;
 }
 
+.bookings ul {
+    list-style-type: none;
+    text-align: center;
+}
